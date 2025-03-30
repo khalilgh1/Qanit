@@ -1,5 +1,6 @@
 import csv
 import time
+import os
 from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 
@@ -60,4 +61,5 @@ def api_data():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)  # Run the Flask app on port 5000
+    port = int(os.environ.get("PORT", 5000))  # Get Render's assigned port
+    app.run(host='0.0.0.0', port=port, debug=True)
