@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head content remains the same, no changes needed here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qanit - Islamic Verses Selector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="corner-ornament top-left"></div>
+        <div class="corner-ornament top-right"></div>
+        <div class="corner-ornament bottom-left"></div>
+        <div class="corner-ornament bottom-right"></div>
+
+        <div class="header">
+            <h1>Qanit</h1>
+            <div class="subtitle">The Intelligent Quran Verses Selector</div>
+            <div class="ornament"></div>
+            <div class="arabic-text">
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="verseCount">How many verses would you like to recite?</label>
+            <div class="number-input-container">
+                <input type="number" id="verseCount" class="number-input" min="1" max="500" value="100" required>
+                <div class="number-controls">
+                    <div class="number-control-btn increment-btn">+</div>
+                    <div class="number-control-btn decrement-btn">−</div>
+                </div>
+            </div>
+            <button id="generateBtn">Find Chapters</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="result" id="resultArea">
+            <h3>Recommended Chapters</h3>
+            <div id="chapterList"></div>
+            <div class="divider"></div>
+            <div id="verseStats"></div>
+        </div>
+
+        <div class="footer">
+            <div class="ornament"></div>
+            <div class="footer-quote">
+                "Indeed, We have sent it down as an Arabic Qur'an that you might understand." [Yusuf: 2]
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,393 @@
+    /* Your existing CSS styles remain unchanged */
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
+    :root {
+        --primary-dark: #0a2e1d;
+        --primary: #0d3e2a;
+        --secondary: #155d40;
+        --gold: #d4af37;
+        --light-gold: #f1e4b2;
+        --cream: #f8f0dc;
+        --white: #ffffff;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--primary-dark);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(var(--gold), #b8860b);
+        border-radius: 10px;
+        border: 2px solid var(--primary-dark);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(#e5c455, #d4af37);
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--primary-dark);
+        background-image: url('/api/placeholder/1200/800');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: var(--cream);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 2rem auto;
+        background-color: rgba(13, 62, 42, 0.9);
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        border: 2px solid var(--gold);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .container::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .header {
+        margin-bottom: 2.5rem;
+        position: relative;
+    }
+
+    .header h1 {
+        font-size: 3.2rem;
+        color: var(--gold);
+        margin-bottom: 0.8rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        color: var(--light-gold);
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+
+    .arabic-text {
+        font-family: 'Amiri', 'Traditional Arabic', serif;
+        font-size: 2rem;
+        color: var(--gold);
+        margin: 1.5rem 0;
+        direction: rtl;
+        line-height: 1.6;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .corner-ornament {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-image: url('/api/placeholder/80/80');
+        background-size: contain;
+        opacity: 0.8;
+    }
+
+    .top-left {
+        top: -20px;
+        left: -20px;
+    }
+
+    .top-right {
+        top: -20px;
+        right: -20px;
+        transform: rotate(90deg);
+    }
+
+    .bottom-left {
+        bottom: -20px;
+        left: -20px;
+        transform: rotate(270deg);
+    }
+
+    .bottom-right {
+        bottom: -20px;
+        right: -20px;
+        transform: rotate(180deg);
+    }
+
+    .form-group {
+        margin: 2.5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    label {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--light-gold);
+        font-weight: 500;
+    }
+
+    /* Custom Number Input Styling */
+    .number-input-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 220px;
+    }
+
+    .number-input {
+        padding: 1rem 1.5rem;
+        border-radius: 50px;
+        border: 2px solid var(--gold);
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--white);
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+        -webkit-appearance: textfield;
+        /* Safari and Chrome */
+        -moz-appearance: textfield;
+        /* Firefox */
+    }
+
+    .number-input::-webkit-inner-spin-button,
+    .number-input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .number-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .number-input:focus {
+        outline: none;
+        border-color: var(--gold);
+        box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .number-controls {
+        position: absolute;
+        right: 8px;
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+    }
+
+    .number-control-btn {
+        background: linear-gradient(135deg, var(--gold), #b8860b);
+        border: none;
+        width: 30px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-dark);
+        font-weight: bold;
+        cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
+        transition: all 0.2s ease;
+    }
+
+    .number-control-btn:first-child {
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        margin-bottom: 2px;
+    }
+
+    .number-control-btn:last-child {
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .number-control-btn:hover {
+        background: linear-gradient(135deg, #e5c455, #d4af37);
+    }
+
+    .number-control-btn:active {
+        transform: scale(0.95);
+    }
+
+    button {
+        margin-top: 1.8rem;
+        padding: 1rem 2.5rem;
+        background: linear-gradient(135deg, var(--gold), #b8860b);
+        color: var(--primary-dark);
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    button::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+        transform: rotate(30deg);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    button:hover::after {
+        opacity: 1;
+        transition: 0.7s;
+    }
+
+    button:active {
+        transform: translateY(1px);
+    }
+
+    .divider {
+        width: 80%;
+        height: 2px;
+        margin: 2rem auto;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .result {
+        margin-top: 2rem;
+        padding: 2rem;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--gold);
+        display: none;
+        color: var(--cream);
+    }
+
+    .result.active {
+        display: block;
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .result h3 {
+        color: var(--gold);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .ornament {
+        width: 100%;
+        height: 40px;
+        background-image: url('/api/placeholder/800/40');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 1.5rem 0;
+        opacity: 0.8;
+    }
+
+    .footer {
+        margin-top: 2.5rem;
+        color: var(--light-gold);
+        font-size: 1rem;
+        font-style: italic;
+        line-height: 1.6;
+    }
+
+    .footer-quote {
+        padding: 1rem 2rem;
+        position: relative;
+    }
+
+    .footer-quote::before,
+    .footer-quote::after {
+        content: '"';
+        font-size: 2.5rem;
+        color: var(--gold);
+        opacity: 0.5;
+        position: absolute;
+    }
+
+    .footer-quote::before {
+        top: -10px;
+        left: 0;
+    }
+
+    .footer-quote::after {
+        bottom: -30px;
+        right: 0;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            width: 95%;
+            padding: 2rem 1.5rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+        }
+
+        .arabic-text {
+            font-size: 1.6rem;
+        }
+
+        .corner-ornament {
+            width: 60px;
+            height: 60px;
+        }
+    }
