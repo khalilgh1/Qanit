@@ -1,4 +1,4 @@
-# Qanit Problem Solver
+# Qanit: The Intelligent Quran Verses Selector
 
 ## Overview
 This project implements a search-based solver for the **Qanit Problem** using various search algorithms, particularly **A* Search**. It models the problem as a graph search, where nodes represent states, and edges represent transitions between states with associated costs. The objective is to find an optimal path from an initial state to a goal state.
